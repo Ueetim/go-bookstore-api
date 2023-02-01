@@ -9,7 +9,7 @@ import (
 
 // db variable
 var (
-	db * gorm.DB
+	db *gorm.DB
 )
 
 // OPEN CONNECTION WITH DB
