@@ -1,3 +1,5 @@
+// FOR DATABASE CONNECTION
+
 package config
 
 import (
@@ -12,5 +14,13 @@ var (
 
 // OPEN CONNECTION WITH DB
 func Connect() {
+	d, err := gorm.Open("mysql", "uduak:quixote4@/simplerest?charset=utf8&parseTime=True&loc=Local")
+	if err != nil {
+		panic(err)
+	}
+	db = d
+}
 
+func GetDB() *gorm.DB {
+	return db
 }
